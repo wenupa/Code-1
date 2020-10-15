@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    double salaries[5];
+    int i;
+
+
+
+    for(i=0;i<5;i++)
+    {
+        printf("Enter salary [%d] : ",i+1);
+        scanf("%lf",&salaries[i]);
+
+
+
+        if(salaries[i]<0)
+        {
+            printf("#Please re-enter the amount \n ");
+        }
+
+
+
+        if(salaries[i]<10000)
+        {
+            salaries[i]+=salaries[i]*0.1;
+        }
+
+
+
+    }
+    printf("Employee num \t Salary \n");
+    for(i=0;i<5;i++)
+    {
+        printf("%d \t\t %lf \n",i+1,salaries[i]);
+    }
+}
